@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resilience by Design - Research Innovation</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js for interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Leaflet for interactive maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1>Resilience by Design</h1>
+            <ul>
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#iceberg">Analysis</a></li>
+                <li><a href="#framework">Framework</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#evidence">Evidence</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>From Anticipatory Action Paradox<br>to Financial Innovation</h1>
+                <p>A research journey exploring how humanitarian organizations can predict crises but not their own funding</p>
+                
+                <div class="research-timeline">
+                    <div class="timeline-item">
+                        <h3>1. The Paradox</h3>
+                        <p>We predict everything except funding</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>2. The Iceberg</h3>
+                        <p>Systemic causes beneath the surface</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>3. The Dance</h3>
+                        <p>Political economy framework</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>4. The Solution</h3>
+                        <p>Resilience by Design</p>
+                    </div>
+                </div>
+                
+                <a href="#demo" class="cta-button">Explore Interactive Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Anticipatory Action Paradox</h2>
+                <p>We invest in sophisticated models to predict floods, droughts, and mass displacements. We can spot crises months ahead. But we fail at predicting the one crisis that threatens all others: funding collapse.</p>
+            </div>
+            
+            <div class="problem-grid">
+                <div>
+                    <h3>The Data Story</h3>
+                    <p>Between 2022 and 2024, the Ukraine crisis triggered an overwhelming donor response, while equally devastating crises in Sudan and Ethiopia struggled for attention.</p>
+                    
+                    <div class="insight-box">
+                        <h4>Key Insight</h4>
+                        <p>Funding doesn't track need in any logical, data-driven way. Donors aren't following the data—they're following the news cycle.</p>
+                    </div>
+                    
+                    <ul style="margin: 1rem 0; padding-left: 2rem;">
+                        <li>2023: Only 52% of humanitarian needs were met</li>
+                        <li>$32 billion funding shortfall</li>
+                        <li>Funds can take 6+ months to materialize</li>
+                        <li>Funding spikes lag behind media attention</li>
+                    </ul>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="fundingChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Iceberg Section -->
+    <section id="iceberg" class="iceberg">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Iceberg Beneath</h2>
+                <p>When we talk about humanitarian funding challenges, most people only see the tip of the iceberg. The real dangers lie beneath the surface.</p>
+            </div>
+            
+            <div class="iceberg-visual">
+                <div class="iceberg-layer tip">
+                    <h3>Visible: Funding Gaps</h3>
+                    <p>The obvious crisis—humanitarian appeals consistently underfunded. Chad saw unmet needs skyrocket by 41%, Malawi by 32%, Mali by 25%.</p>
+                </div>
+                
+                <div class="iceberg-layer middle">
+                    <h3>Partially Hidden: Delays & Volatility</h3>
+                    <p>Sudan's funding delays increased from 50 days to 240 days. Ukraine's volatility coefficient jumped from 0.8 to 2.6. Organizations can't predict when money will arrive.</p>
+                </div>
+                
+                <div class="iceberg-layer base">
+                    <h3>Hidden Danger: Political Risk</h3>
+                    <p>Government changes, geopolitical shifts, electoral cycles. When politics change, millions of vulnerable people pay the price. This is the deepest, most dangerous part.</p>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <div class="iceberg-figure">
+                 <!-- Put cop.PNG in the same folder as index.html -->
+                 <img id="icebergImage"
+                      src="cop.PNG"
+                      alt="The Iceberg Beneath the Anticipatory Action Paradox"
+                      loading="lazy" />
+                 <div class="figure-caption">The Iceberg Beneath the Anticipatory Action Paradox</div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Framework Section -->
+    <section id="framework" class="framework">
+        <div class="container">
+            <div class="section-header">
+                <h2>Learning to Dance with the System</h2>
+                <p>Humanitarian aid isn't primarily about reducing poverty, it's about managing donor relationships. Funding follows politics, not needs.</p>
+            </div>
+            
+            <div class="tango-metaphor">
+                <h3>It Takes Two to Tango</h3>
+                <p>In tango, disconnection is the worst thing that can happen. In humanitarian aid, it's happening constantly and predictably.</p>
+                
+                <div class="dance-partners">
+                    <div class="partner">
+                        <h4>The Leader (Donors)</h4>
+                        <p>Sets the rhythm, chooses direction, shifts course without warning. Must be decisive yet responsive.</p>
+                    </div>
+                    <div class="partner">
+                        <h4>The Follower (Organizations)</h4>
+                        <p>Interprets signals, pivots quickly. Must be agile but grounded. Often gets signals too late.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                <h4>The Principal-Agent Problem</h4>
+                <p>Donors care about politics, optics, and influence—not always what organizations think they should care about. This misalignment makes volatility a built-in feature, not a bug.</p>
+            </div>
+            
+            <h3 style="text-align: center; margin: 2rem 0;">But What If We Could Predict the Dance Moves?</h3>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resilience by Design</h2>
+                <p>What if humanitarian organizations could read donor behavior the way skilled dancers read a partner's weight shifts?</p>
+            </div>
+            
+            <div class="conceptual-framework">
+                <h3>The Framework</h3>
+                <div class="framework-diagram">
+                    <img src="conceptual-framework.png" alt="Humanitarian Funding Stress Framework" style="max-width: 100%; height: auto; border-radius: 10px;">
+                </div>
+            </div>
+            
+            <div class="innovation-grid">
+                <div class="innovation-card">
+                    <h4>Funding Stress Index (FSI)</h4>
+                    <p>Quantifies financial stress using delay, volatility, coverage, and concentration indices. Provides early warning when stress builds.</p>
+                </div>
+                <div class="innovation-card">
+                    <h4>Parametric Insurance</h4>
+                    <p>Automatically triggers payouts when FSI crosses threshold. No lengthy claims process—just immediate financial relief.</p>
+                </div>
+                <div class="innovation-card">
+                    <h4>Real-Time Monitoring</h4>
+                    <p>Uses IATI and FTS data streams to track funding patterns and political confidence in real-time.</p>
+                </div>
+                <div class="innovation-card">
+                    <h4>Onion Layer Approach</h4>
+                    <p>Multiple levels of protection: project, organization, sector, and system-wide insurance layers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Evidence Section -->
+    <section id="evidence" class="evidence">
+        <div class="container">
+            <div class="section-header">
+                <h2>Evidence & Validation</h2>
+                <p>Key findings from the simulation using real humanitarian crisis data</p>
+            </div>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <h4>Early Warning Potential</h4>
+                    <p>Preliminary simulations suggest the FSI can flag funding stress 2–3 months before operational cash shortfalls, but performance varies by crisis context.</p>
+                </div>
+                <div class="result-card">
+                    <h4>Insurance Effect</h4>
+                    <p>Layered parametric coverage reduced funding volatility in test cases (Sudan, Ukraine), with simulated gap reductions of 40–99% depending on trigger design.</p>
+                </div>
+                <div class="result-card">
+                    <h4>Threshold Sensitivity</h4>
+                    <p>FSI thresholds (tested between 1.5–2.5) showed trade-offs between false positives and missed crises — highlighting the need for rigorous calibration.</p>
+                </div>
+                <div class="result-card">
+                    <h4>Data Grounding</h4>
+                    <p>Model run on 27 months of FTS and IATI crisis data. Data quality issues (delays in reporting, donor inconsistencies) remain a research challenge</p>
+                </div>
+                <div class="result-card">
+                    <h4>Theoretical Foundations</h4>
+                    <p>Approach draws on financial risk management and insurance economics; needs interdisciplinary refinement (political science, actuarial science, development economics).</p>
+                </div>
+                <div class="result-card">
+                    <h4>Next Research Steps</h4>
+                    <p>Expand dataset beyond Sudan/Ukraine, test alternative FSI components (e.g., Political Shift Index, Economic Pressure Index), and explore governance models for sector-wide adoption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interactive Demonstration</h2>
+                <p>Experience the FSI and parametric insurance system using real crisis data from Sudan and Ukraine (January 2022 - March 2024)</p>
+            </div>
+            
+            <div class="demo-container">
+                <div class="demo-controls">
+                    <div class="control-panel">
+                        <h3>Simulation Controls</h3>
+                        
+                        <div class="control-group">
+                            <label for="countrySelect">Country:</label>
+                            <select id="countrySelect">
+                                <option value="Sudan">Sudan</option>
+                                <option value="Ukraine">Ukraine</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="organizationSelect">Organization:</label>
+                            <select id="organizationSelect">
+                                <option value="UNHCR">UNHCR</option>
+                                <option value="IOM">IOM</option>
+                                <option value="ICRC">ICRC</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="durationSlider">Duration (months): <span id="durationValue">6</span></label>
+                            <input type="range" id="durationSlider" min="3" max="27" value="6">
+                        </div>
+                        
+                        <div class="control-group">
+    <h4>FSI Components</h4>
+    <label for="fsiEnabled">Enable FSI:</label>
+    <input type="checkbox" id="fsiEnabled" checked>
+    
+    <label for="delayWeight">Delay Index Weight: <span id="delayWeightValue">0.25</span></label>
+    <input type="range" id="delayWeight" min="0" max="1" step="0.05" value="0.25">
+    
+    <label for="volatilityWeight">Volatility Index Weight: <span id="volatilityWeightValue">0.25</span></label>
+    <input type="range" id="volatilityWeight" min="0" max="1" step="0.05" value="0.25">
+    
+    <label for="coverageWeight">Coverage Index Weight: <span id="coverageWeightValue">0.25</span></label>
+    <input type="range" id="coverageWeight" min="0" max="1" step="0.05" value="0.25">
+    
+    <label for="concentrationWeight">Concentration Index Weight: <span id="concentrationWeightValue">0.25</span></label>
+    <input type="range" id="concentrationWeight" min="0" max="1" step="0.05" value="0.25">
+    
+    <label for="psiWeight">Political Shift Index Weight: <span id="psiWeightValue">0.10</span></label>
+    <input type="range" id="psiWeight" min="0" max="1" step="0.05" value="0.10">
+    
+    <label for="epiWeight">Economic Pressure Index Weight: <span id="epiWeightValue">0.10</span></label>
+    <input type="range" id="epiWeight" min="0" max="1" step="0.05" value="0.10">
+</div>
+                        
+                        <div class="control-group">
+    <h4>Insurance Settings</h4>
+    <label for="insuranceEnabled">Enable Insurance:</label>
+    <input type="checkbox" id="insuranceEnabled">
+    
+    <label for="premiumRate">Premium Rate (% of initial budget/month): <span id="premiumRateValue">2.0</span></label>
+    <input type="range" id="premiumRate" min="0.5" max="5.0" step="0.1" value="2.0">
+    
+    <label for="payoutCapX">Payout Cap (× monthly premium): <span id="payoutCapXValue">3.0</span></label>
+    <input type="range" id="payoutCapX" min="1.0" max="6.0" step="0.5" value="3.0">
+    
+    <label for="claimTriggerFrac">Claim Trigger (balance as % of initial budget): <span id="claimTriggerFracValue">50</span></label>
+    <input type="range" id="claimTriggerFrac" min="10" max="90" step="5" value="50">
+    
+    <label for="waitingPeriod">Waiting Period (months between claims): <span id="waitingPeriodValue">1</span></label>
+    <input type="range" id="waitingPeriod" min="0" max="6" step="1" value="1">
+    
+    <label for="triggerThreshold">FSI Trigger Threshold: <span id="triggerThresholdValue">2.0</span></label>
+    <input type="range" id="triggerThreshold" min="1.0" max="3.5" step="0.1" value="2.0">
+</div>
+                        
+                        <button id="runSimulation" class="cta-button">Run Simulation</button>
+                    </div>
+                </div>
+                
+                <div class="demo-results">
+                    <div class="map-container">
+                        <h3>Event Map</h3>
+                        <div id="eventMap" style="height: 260px; border-radius: 10px;"></div>
+                    </div>
+                    
+                    <div class="charts-container">
+                        <div class="chart-item">
+                            <h4>Cash Balance Comparison</h4>
+                            <canvas id="cashBalanceChart"></canvas>
+                        </div>
+                        
+                        <div class="chart-item">
+                            <h4>FSI Timeline</h4>
+                            <canvas id="fsiChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="simulation-log">
+                        <h4>Simulation Log</h4>
+                        <div id="logContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Continue the Conversation</h2>
+                <p>Interested in collaborating on this research or learning more about the methodology?</p>
+            </div>
+            
+            <div class="contact-links">
+                <a href="https://medium.com/@fekih.sarah/when-aid-ignores-its-own-data-f412eaf04633" target="_blank" class="contact-link">When Aid Ignores Its Own Data</a>
+                <a href="https://medium.com/@fekih.sarah/one-big-iceberg-beneeth-the-anticipatory-action-paradox-e5d195b63880" target="_blank" class="contact-link">The Iceberg Analysis</a>
+                <a href="https://medium.com/@fekih.sarah/crying-about-funding-wont-help-but-this-onion-might-8c0197523d49" target="_blank" class="contact-link">The Onion Layer Approach</a>
+                <a href="https://medium.com/@fekih.sarah/funding-volatility-isnt-a-charity-problem-it-s-a-feature-4c48dc30eac2" target="_blank" class="contact-link">Funding Volatility as Feature</a>
+            </div>
+            
+            <div style="margin: 3rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h3>Research Impact</h3>
+                <p>This research aims to transform humanitarian financing from reactive to predictive, potentially stabilizing funding for millions of vulnerable people worldwide. The tools exist—it's time to use them.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="data.js"></script>
+    <script src="simulation.js"></script>
+    <script src="charts.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
