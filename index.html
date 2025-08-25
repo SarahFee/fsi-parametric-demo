@@ -180,10 +180,58 @@
             
             <div class="conceptual-framework">
                 <h3>The Framework</h3>
-                <div class="framework-diagram">
-                    <img src="conceptual-framework.png" alt="Humanitarian Funding Stress Framework" style="max-width: 100%; height: auto; border-radius: 10px;">
+                <p style="margin-bottom:1.5rem;">
+                This framework has two layers:
+                <br><br>
+                <strong>The Grey Layer – Status Quo:</strong> Today’s humanitarian financing follows a
+                <em>principal–agent logic</em>. Donors (principals) pledge and release funds not to match
+                needs, but according to shifting political and economic incentives. This creates delays,
+                volatility, partial disbursements, and sudden withdrawals—systemic distortions that
+                organizations (agents) cannot anticipate or manage.
+                <br><br>
+                <strong>The Yellow Layer – Proposed Mechanism:</strong> Our project introduces a
+                <em>Funding Stress Index (FSI)</em> that measures six dimensions of stress: delay, volatility,
+                coverage, concentration, political shifts, and economic pressures. When thresholds are
+                breached, the index automatically triggers <em>parametric insurance payouts</em>. This
+                stabilizes cash flow, smooths liquidity shocks, and reduces costly service disruptions.
+                <br><br>
+                In short: the grey shows how things are; the yellow shows how things could be—moving
+                from reactive donor cycles to proactive financial resilience.
+                </p>
+
+                <div class="cf-toolbar">
+                    <div class="cf-toggle">
+                        <label>
+                            <input type="checkbox" id="cfToggleStatusQuo" checked>
+                            Show Status Quo (grey)
+                        </label>
+                        <label>
+                            <input type="checkbox" id="cfToggleProposal" checked>
+                            Show Proposed Layer (yellow)
+                        </label>
+                    </div>
+                    <div class="cf-legend">
+                        <span class="dot dot-grey"></span> Status Quo
+                        <span class="dot dot-yellow"></span> Proposed
+                    </div>
                 </div>
-            </div>
+
+                <div class="cf-wrap">
+                    <div class="cf-canvas" id="cfCanvas" aria-label="Interactive conceptual framework diagram">
+                        <!-- SVG diagram is injected by JS -->
+                    </div>
+
+                    <aside class="cf-side" id="cfSide">
+                        <div class="cf-side-empty" id="cfSideEmpty">
+                            <h4>Click any box to learn more</h4>
+                            <p>You can also toggle layers above to focus on today’s system (grey) vs the proposal (yellow).</p>
+                        </div>
+                        <div class="cf-side-content" id="cfSideContent" hidden>
+                            <h4 id="cfTitle"></h4>
+                            <p id="cfBody"></p>
+                        </div>
+                    </aside>
+                </div>
             
             <div class="innovation-grid">
                 <div class="innovation-card">
@@ -205,6 +253,7 @@
             </div>
         </div>
     </section>
+
     <!-- Evidence Section -->
     <section id="evidence" class="evidence">
         <div class="container">
