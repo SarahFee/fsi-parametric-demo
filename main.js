@@ -486,7 +486,7 @@ function initializeConceptualFramework() {
       title:'FSI Funders',
       body:'Blended capital: donors, INGOs/UN, banks/insurers/reinsurers backstop the mechanism.' },
     { id:'fsi',        x:410, y:210, w:190, h:80, layer:'yellow',
-      title:'FSI = DI + VI + CI + CoI + PSI + EPI',
+      title:'FSI = (DI, VI, CI, CoI, PSI, EPI)',
       body:'Composite Funding Stress Index combining delay, volatility, coverage, concentration, political and macro pressures.' },
     { id:'param',      x:610, y:120, w:190, h:60, layer:'yellow',
       title:'Parametric Insurance Payout',
