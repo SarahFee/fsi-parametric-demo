@@ -1,4 +1,4 @@
-# SolferinTech
+# SolferinsTech
 
 **If we can predict crises, why not funding?**
 
@@ -37,4 +37,4 @@ A humanitarian finance system where:
 * Donors can adjust without creating collapse
 * Funding becomes as predictable as crisis models
 
-SolferinTech is not about replacing aid. It’s about giving it a safety net.
+SolferinsTech is not about replacing aid. It’s about giving it a safety net.
