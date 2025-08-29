@@ -2,8 +2,6 @@
 
 **If we can predict crises, why not funding?**
 
----
-
 ## Problem
 
 Humanitarian organizations can forecast floods, droughts, and displacement — but not their own funding.
@@ -13,8 +11,6 @@ Humanitarian organizations can forecast floods, droughts, and displacement — b
 * Across multiple crises, billions in pledges never reach the ground.
 
 The result: disrupted food aid, broken health services, and service restart costs that are 2–3 times higher than continuity.
-
----
 
 ## Solution
 
@@ -28,7 +24,6 @@ When thresholds are breached, **parametric insurance** activates:
 
 **Impact:** Simulations show 40–99% gap reduction in crisis settings.
 
----
 ## Vision
 
 A humanitarian finance system where:
