@@ -519,22 +519,22 @@ section {
     color: var(--text-dark);
 }
 
-/* Contact Section */
-.contact {
+/* Resources Section */
+.resources {
     background: var(--primary-blue);
     color: var(--white);
     text-align: center;
 }
 
-.contact .section-header h2 {
+.resources .section-header h2 {
     color: var(--white);
 }
 
-.contact .section-header p {
+.resources .section-header p {
     color: rgba(255,255,255,0.9);
 }
 
-.contact-links {
+.resources-links {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -542,7 +542,7 @@ section {
     flex-wrap: wrap;
 }
 
-.contact-link {
+.resources-link {
     background: var(--accent-orange);
     padding: 1rem 2rem;
     border-radius: 50px;
@@ -552,7 +552,7 @@ section {
     font-weight: 500;
 }
 
-.contact-link:hover {
+.resources-link:hover {
     background: #ea580c;
     transform: translateY(-2px);
 }
@@ -617,7 +617,7 @@ section {
         grid-template-columns: 1fr;
     }
     
-    .contact-links {
+    .resources-links {
         flex-direction: column;
         align-items: center;
     }
